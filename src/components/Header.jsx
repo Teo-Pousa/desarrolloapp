@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
 import {colors} from "../global/colors";
-import React from 'react';
 
 
 function Header({title})  {
@@ -15,7 +14,6 @@ export default Header
 
 const styles= StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: colors.green_1,
         width: "100%",
         paddingVertical: 8 

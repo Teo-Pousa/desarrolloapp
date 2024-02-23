@@ -7,7 +7,7 @@ return (
         {children}
     </View>
     )
-}
+};
 
 export default Card
 
