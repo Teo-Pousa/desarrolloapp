@@ -1,27 +1,27 @@
-import { View, Text, StyleSheet } from 'react-native';
-import {colors} from "../global/colors";
+import { Text, View, StyleSheet } from "react-native";
+import { colors } from "../global/colors";
 
-
-function Header({title})  {
+function Header({ title }) {
     return (
-    <View style={styles.container} >
-        <Text style={styles.text}>{title} </Text>
-    </View>
-)
+        <View style={styles.container}>
+            <Text style={styles.text}>{title}</Text>
+        </View>
+    );
 }
 
-export default Header
+export default Header;
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.green_1,
+        height: 50,
         width: "100%",
-        paddingVertical: 8 
+        backgroundColor: colors.green_3_300,
+        justifyContent: "center",
+        alignItems: "center",
     },
-    text:{
-        fontSize: 30, 
-        color:"white",
-        textAlign:"center",
-        fontWeight:"bold"
-    }
+    text: {
+        textAlign: "center",
+        color: "white",
+        fontSize: 20,
+    },
 });

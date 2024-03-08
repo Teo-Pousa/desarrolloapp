@@ -4,36 +4,36 @@ import { AntDesign } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 
 const Search = ({ onSearch }) => {
-const [input, setInput] = useState("");
+    const [input, setInput] = useState("");
 
-  // handleSearch va a realizar un filtrado de los productos utilizando el valor guardado en "input"
-const handleSearch = () => {
-    if (input) {
-        onSearch(input);
-    }
-};
+    // handleSearch va a realizar un filtrado de los productos utilizando el valor guardado en "input"
+    const handleSearch = () => {
+        if (input) {
+            onSearch(input);
+        }
+    };
 
-  //funcion que limpia el campo del input
-const removeInput = () => {
-    setInput("");
-};
+    //funcion que limpia el campo del input
+    const removeInput = () => {
+        setInput("");
+    };
 
     return (
         <View style={styles.container}>
-        <View style={styles.inputContainer}>
-            <TextInput
-            style={styles.input}
-            value={input}
-            onChangeText={setInput}
-            placeholder="Buscar producto..."
-            />
-            <Pressable onPress={handleSearch}>
-            <AntDesign name="search1" size={25} color="black" />
-            </Pressable>
-            <Pressable onPress={removeInput}>
-            <Entypo name="circle-with-cross" size={25} color="black" />
-            </Pressable>
-        </View>
+            <View style={styles.inputContainer}>
+                <TextInput
+                    style={styles.input}
+                    value={input}
+                    onChangeText={setInput}
+                    placeholder="Buscar producto..."
+                />
+                <Pressable onPress={handleSearch}>
+                    <AntDesign name="search1" size={25} color="black" />
+                </Pressable>
+                <Pressable onPress={removeInput}>
+                    <Entypo name="circle-with-cross" size={25} color="black" />
+                </Pressable>
+            </View>
         </View>
     );
 };
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "flex-start",
         width: '100%',
+        flex: 1
     },
     inputContainer: {
         flexDirection: "row",
